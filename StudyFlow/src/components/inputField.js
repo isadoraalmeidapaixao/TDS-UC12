@@ -1,4 +1,5 @@
 import { ImageBackground } from "react-native/types_generated/index"
+import { colors } from "../styles/colors"
 
 export default function InputField({
     label,

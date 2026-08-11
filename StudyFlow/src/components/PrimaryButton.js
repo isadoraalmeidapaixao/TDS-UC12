@@ -1,4 +1,5 @@
 import { Pressable } from "react-native";
+import { colors } from "../styles/colors";
 
 export default function PrimaryButton({ title, onPress, disabled = false }) {
 

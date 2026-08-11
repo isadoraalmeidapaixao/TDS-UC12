@@ -1,7 +1,7 @@
 //centraliza as cores do aplicativo
 
 export const colors = {
-    primary: '#84acccff',
+    primary: '#375a79ff',
     primaryDark: '#274668ff',
     secundary: '#d41f1fff',
 
@@ -14,4 +14,4 @@ export const colors = {
 
     error: '#ff0000ff',
     success : '#00ff00ff',
-}
+};
