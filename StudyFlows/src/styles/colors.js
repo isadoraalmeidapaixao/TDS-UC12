@@ -2,7 +2,7 @@
 
 // Exemplo de uso:
 // backgroundColor: Colors.primary
-export const  colors = {
+export const colors = {
     // Cores principais  da identidade visual
     primary: '#3157d5',
     primaryDark: '#203c9e',
@@ -13,7 +13,7 @@ export const  colors = {
     surface: '#ffff',
 
     //Cores usadas em textos e bordas
-    text:'#1f2937',
+    text: '#1f2937',
     textLight: '#6b7280',
     border: '#d9dfea',
 
