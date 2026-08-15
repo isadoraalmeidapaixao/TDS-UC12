@@ -6,13 +6,13 @@ import { colors } from "../styles/colors";
 
 export default function InputField({
     label,
-    value, 
+    value,
     onChangeText,
     placeholder,
     secureTextEntry = false,
     keyboardType = 'default',
     autoCapitaliza = 'sentences',
-}){
+}) {
     //Props recebidas:
     // - label: texto acima do campo
     // - value:  valor atual do campo, controlado pela tela que usa o componente.
@@ -40,8 +40,8 @@ export default function InputField({
 };
 
 const styles = StyleSheet.create({
-    container:{
-        width:'100%',
+    container: {
+        width: '100%',
         gap: 8,
     },
     label: {
@@ -49,14 +49,14 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '600',
     },
-    input:{
+    input: {
         minHeight: 52,
         borderWidth: 1,
         borderColor: colors.border,
         borderRadius: 14,
         backgroundColor: colors.surface,
         color: colors.text,
-        fontSize:16,
+        fontSize: 16,
         paddingHorizontal: 16,
     },
 

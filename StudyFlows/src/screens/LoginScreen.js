@@ -10,46 +10,40 @@ const VALID_PASSWORD = '123';
 
 export default function LoginScreen({ navigation }) {
     // cada useState cria uma informação que pode mudar na tela
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [erroMenssage, setErroMenssage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     function handleLogin() {
-
         const normalizedEmail = email.trim().toLocaleLowerCase();
 
         if (!normalizedEmail || !password) {
-            setErroMenssage('Preencha o email e a senha.');
+            setErrorMessage('Preencha o email e a senha.');
             return;
         }
 
         if (normalizedEmail !== VALID_EMAIL || password !== VALID_PASSWORD) {
-            setErroMenssage('E-mail ou senha incorretos.');
+            setErrorMessage('E-mail ou senha incorretos.');
             return;
         }
 
-        //Limpa o erro antes de navegar.
-        setErroMenssage('');
+        // Limpa o erro antes de navegar
+        setErrorMessage('');
 
-        // replace impede que o usuario volte para tela de login pelo botao de voltar
-        // o segundo argumento envia os parametros para tela de Home
+        // replace impede que o usuário volte para tela de login pelo botão de voltar
         navigation.replace('Home', { studentName: 'Estudante' });
     }
 
     return (
-
-        //KeyboardAvoidingView  ajuda a tela a se ajustar quando o teclado abre.
+        // KeyboardAvoidingView ajuda a tela a se ajustar quando o teclado abre
         <KeyboardAvoidingView
             style={styles.keyboardArea}
             behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         >
             <ScrollView
-                contentContainerStyle={styles.scrollArea}
-                KeyboardShouldPersistTaps="handled"
-
+                contentContainerStyle={styles.container}
+                keyboardShouldPersistTaps="handled"
             >
-
                 <View style={styles.header}>
                     <Text style={styles.logo}>SF</Text>
                     <Text style={styles.title}>Bem-Vindo ao StudyFlow</Text>
@@ -60,35 +54,30 @@ export default function LoginScreen({ navigation }) {
                     <InputField
                         label="Email"
                         value={email}
-                        OnChangeText={setEmail}
+                        onChangeText={setEmail}
                         placeholder="Digite seu email"
                         keyboardType="email-address"
                         autoCapitalize="none"
                     />
 
-
                     <InputField
                         label="Senha"
                         value={password}
-                        OnChangeText={setPassword}
+                        onChangeText={setPassword}
                         placeholder="Digite sua senha"
                         autoCapitalize="none"
                         secureTextEntry={true}
                     />
 
-                    {erroMenssage ? (
-                        <Text style={styles.errorText}>{erroMenssage}
-                        </Text>)
-                        : null}
+                    {errorMessage ? (
+                        <Text style={styles.errorText}>{errorMessage}</Text>
+                    ) : null}
 
                     <PrimaryButton title="Entrar" onPress={handleLogin} />
-
                 </View>
-
             </ScrollView>
-
         </KeyboardAvoidingView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -98,7 +87,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flexGrow: 1,
-        justifyContent: 'center',
+        justify: 'center',
         padding: 24,
         gap: 36,
     },
@@ -118,6 +107,11 @@ const styles = StyleSheet.create({
         lineHeight: 22,
         textAlign: 'center',
     },
+    subtitle: {
+        color: colors.textLight,
+        fontSize: 13,
+        textAlign: 'center',
+    },
     form: {
         gap: 18,
     },
@@ -126,4 +120,4 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '600',
     }
-})
+});
