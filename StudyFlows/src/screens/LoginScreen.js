@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flexGrow: 1,
-        justify: 'center',
+        justifyContent: 'center',
         padding: 24,
         gap: 36,
     },
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     logo: {
         color: colors.primary,
         fontSize: 58,
-        fontWeight: '800',
+        fontWeight: '800'
     },
     title: {
         maxWidth: 320,
@@ -107,17 +107,13 @@ const styles = StyleSheet.create({
         lineHeight: 22,
         textAlign: 'center',
     },
-    subtitle: {
-        color: colors.textLight,
-        fontSize: 13,
-        textAlign: 'center',
-    },
     form: {
         gap: 18,
     },
-    errorText: {
-        color: colors.error,
+    erroText: {
+        color: colors.erro,
         fontSize: 14,
         fontWeight: '600',
     }
-});
+
+})

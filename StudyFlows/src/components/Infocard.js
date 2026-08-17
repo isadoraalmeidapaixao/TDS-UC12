@@ -7,7 +7,7 @@ export default function InfoCard({
     icon,
     title,
     value
-}){
+}) {
 
     // Props recebidas:
     // icon: pequeno texto/ simbolo exibido no topo do card
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 6,
         borderRadius: 18,
-        backgroundColor:colors.surface,
+        backgroundColor: colors.surface,
         // shadow* criar sombra no IOS.
-        shadowColor:'#0000',
-        shadowOffset: { width: 0, height: 2},
+        shadowColor: '#0000',
+        shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.08,
         shadowRadius: 8,
         // elevation cria a sombra no Android.
@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
     icon: {
         color: colors.primary,
         fontSize: 12,
-        fontWeight:'800',
+        fontWeight: '800',
     },
-    value : {
+    value: {
         color: colors.primary,
         fontSize: 24,
         fontWeight: '800',
     },
-    title : {
+    title: {
         color: colors.textLight,
         fontSize: 13,
         textAlign: 'center',

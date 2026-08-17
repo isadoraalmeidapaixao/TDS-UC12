@@ -1,7 +1,6 @@
 import { useState } from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View } from "react-native/types_generated/index";
-import { ScrollView } from "react-native/types_generated/index";
 
 export default function HomeScreen({ route, navigation }) {
 
@@ -40,3 +39,4 @@ export default function HomeScreen({ route, navigation }) {
 const styles = StyleSheet.create({
 
 })
+
